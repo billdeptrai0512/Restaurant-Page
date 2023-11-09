@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-height: 80vh;
+    min-width: 100vw;
+    background: url(./image/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    opacity: 0.85;
+    color: white;
+}
+
+.title {
+    font-size: 5em;
+    margin: 0;
+    padding: 0.15em;
+}
+
+.button {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: transparent;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5em;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+}
+
+.button:hover {
+    transform: translateY(-10px) ;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:focus::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    bottom: -3px;
+    right: 0%;
+    outline: none;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0rem;
+    color: white;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.65);
+    margin: 2rem 40rem;
+    border-radius: 10px;
+}
+
+.board .words {
+    margin: 12px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 3rem 3rem;
+    color: white;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.65);
+    margin: 2rem 40rem;
+    border-radius: 10px;
+}
+
+.contact .words {
+    margin-top: 10px;
+}
+
+
+.image {
+    background: url('./image/chef.png');
+    border-radius: 50%;
+    width: 40%;
+}
+
+.map {
+    background: url('./image/map.png');
+    width: 100%;
+}
+
+.board .contact {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 1rem;
+    bottom: 0px;
+}
