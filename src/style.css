@@ -50,15 +50,9 @@ body {
     cursor: pointer;
 }
 
-.button:focus::after {
-    content: '';
-    height: 3px;
-    width: 100%;
-    background: white;
-    position: absolute;
-    bottom: -3px;
-    right: 0%;
-    outline: none;
+.button.active {
+    border-bottom: 2px solid white;
+    transition: 0s;
 }
 
 .board {
@@ -66,7 +60,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0rem;
+    padding: 3rem 3rem;
     color: white;
     font-size: 1.2em;
     background: rgba(0, 0, 0, 0.65);
@@ -112,6 +106,33 @@ body {
     text-align: left;
 }
 
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 3rem;
+    color: white;
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.65);
+    margin: 2rem 30rem;
+    border-radius: 10px;
+}
+
+.menu .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+}
+
+.food{
+    width: 80%;
+}
+
 .footer {
     display: flex;
     justify-content: center;
@@ -120,4 +141,9 @@ body {
     color: white;
     padding: 1rem;
     bottom: 0px;
+}
+
+.github {
+    width: 2rem;
+    margin-left: 0.5rem;
 }

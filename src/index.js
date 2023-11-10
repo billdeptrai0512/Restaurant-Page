@@ -3,6 +3,7 @@ import './style.css';
 import { addHome } from './home';
 import { addMenu } from './menu';
 import { addContact } from './contact';
+import github from './image/github.png';
 
 const page = document.querySelector('#content')
 
@@ -46,18 +47,28 @@ function addContent() {
     const contact = document.querySelector('#contact');
 
     body.appendChild(addHome());
+    home.classList.add('active');
 
     home.addEventListener('click', () => {
+        home.classList.add('active');
+        menu.classList.remove('active');
+        contact.classList.remove('active');
         body.innerHTML = '';
         body.appendChild(addHome());
     });
 
     menu.addEventListener('click', () => {
+        home.classList.remove('active');
+        menu.classList.add('active');
+        contact.classList.remove('active');
         body.innerHTML = '';
         body.appendChild(addMenu());
     })
 
     contact.addEventListener('click', () => {
+        home.classList.remove('active');
+        menu.classList.remove('active');
+        contact.classList.add('active');
         body.innerHTML = '';
         body.appendChild(addContact());
     })
@@ -70,6 +81,17 @@ function addContent() {
     const footer = document.createElement('footer');
     footer.classList.add('footer')
     footer.textContent = "Copyright © 2023 billdeptrai0512"
+
+    const git = new Image()
+    git.classList.add('github')
+    git.src = github
+
+    const link = document.createElement('a')
+    link.href = 'https://github.com/billdeptrai0512'
+    link.target = '_blank'
+
+    link.appendChild(git)
+    footer.appendChild(link)
     page.appendChild(footer)
 
     return page
